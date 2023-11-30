@@ -1,3 +1,5 @@
+CREATE DATABASE readyplay;
+
 USE readyplay;
 
 CREATE TABLE usuarios (
@@ -11,3 +13,10 @@ CREATE TABLE usuarios (
     senha VARCHAR(50) NOT NULL
 
 );
+
+select * from usuarios;
+
+insert into usuarios(nome, nome_usuario, email, telefone, genero, data_nascimento, senha)
+values ('Jesus', 'jesus_sanguebom', 'jesus.cristo@deus.com', '81000000000', 'masculino', '0000-12-15', 'amem');
+
+delete from usuarios where id = 4;
