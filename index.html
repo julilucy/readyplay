@@ -1,6 +1,6 @@
-
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <div class="container-fluid">
         <div class="row">
@@ -27,6 +28,7 @@
                             </a>
                         </li>
                         <br>
+                                          
                         <li class="nav-item">
                             <a class="nav-link" href="#">
                                 Cadastro
@@ -45,81 +47,112 @@
                             </a>
                         </li>
                     </ul>
+                    <div class="separador">
+                        <div class="barra"></div>
+                    </div>
+                    <ul class="nav flex-column">     
+                        <li class="nav-item">
+                            <a class="nav-link" id="dev-mode" href="#">
+                                DEV MODE
+                            </a>
+                        </li>
+                        <br>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./lista.php">
+                                Lista de Usuários
+                            </a>
+                        </li>
+                        <br>
+                    </ul>
                 </div>
             </nav>
             <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
-    
-    <div class="container">
-            <div class="box">
-                <form action="form.php" method="post">
-                    <fieldset>
-                        <legend><b>Cadastro Usuário</b></legend>
-                <br>
-                <div class="inputBox">
-                    <input type="text" name="nome" id="nome" class="inputUser" required>
-                    <label for="nome" class="labelInput">Nome completo</label>
-                </div>
-                <br><br>
-                <div class="inputBox">
-                    <input type="text" name="nomeusuario" id="nomeusuario" class="inputUser" required>
-                    <label for="nomeusuario" class="labelInput">Nome de Usuário</label>
-                </div>
-                <br><br>
-                <div class="inputBox">
-                    <input type="text" name="email" id="email" class="inputUser" required>
-                    <label for="email" class="labelInput">Email</label>
-                </div>
-                <br><br>
-                <div class="inputBox">
-                    <input type="tel" name="telefone" id="telefone" class="inputUser" required>
-                    <label for="telefone" class="labelInput">Telefone</label>
-                </div>
-                <br><br>
-                <p>Sexo:</p>
-                <input type="radio" id="feminino" name="genero" value="feminino" required>
-                <label for="feminino">Feminino</label>
-                <br>
-                <input type="radio" id="masculino" name="genero" value="masculino" required>
-                <label for="masculino">Masculino</label>
-                <br>
-                <input type="radio" id="outro" name="genero" value="outro" required>
-                <label for="outro">Outro</label>
-                <br><br>
-                <label for="data_nascimento"><b>Data de Nascimento:</b></label>
-                <input type="date" name="data_nascimento" id="data_nascimento" required>
-                <br><br>
-                <div class="inputBox">
-                    <input type="password" name="senha" id="senha" class="inputUser" required>
-                    <label for="senha" class="labelInput">Senha</label>
-                    <i class="bi bi-eye-fill" id="btn-senha" onclick="mostrarSenha()"></i>
-                </div>
-                <br><br>
-                <div class="inputBox">
-                    <input type="password" name="senha" id="senha" class="inputUser" required>
-                    <label for="senha" class="labelInput">Confirmar Senha</label>
-                    <i class="bi bi-eye-fill" id="btn-senha" onclick="mostrarSenha()"></i>
-                <br><br>
-                <button type="submit" id="submit" class="btn btn-primary">Enviar</button>
-            </fieldset>
-        </form>
-    </div>
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
 
-    <script>
-        function mostrarSenha(){
-    var inputPass = document.getElementById('senha')
-    var btnShowPass = document.getElementById('btn-senha')
+                <div class="container">
+                    <div class="box">
+                        <form action="./php/cadastrar.php" method="post">
+                            <fieldset>
+                                <legend><b>Cadastro Usuário</b></legend>
+                                <br>
+                                <div class="inputBox">
+                                    <input type="text" name="nome" id="nome" class="inputUser" required>
+                                    <label for="nome" class="labelInput">Nome completo</label>
+                                </div>
+                                <br><br>
+                                <div class="inputBox">
+                                    <input type="text" name="nome_usuario" id="nome_usuario" class="inputUser" required>
+                                    <label for="nome_usuario" class="labelInput">Nome de Usuário</label>
+                                </div>
+                                <br><br>
+                                <div class="inputBox">
+                                    <input type="text" name="email" id="email" class="inputUser" required>
+                                    <label for="email" class="labelInput">Email</label>
+                                </div>
+                                <br><br>
+                                <div class="inputBox">
+                                    <input type="tel" name="telefone" id="telefone" class="inputUser" required>
+                                    <label for="telefone" class="labelInput">Telefone</label>
+                                </div>
+                                <br><br>
+                                <p>Sexo:</p>
+                                <input type="radio" id="feminino" name="genero" value="feminino" required>
+                                <label for="feminino">Feminino</label>
+                                <br>
+                                <input type="radio" id="masculino" name="genero" value="masculino" required>
+                                <label for="masculino">Masculino</label>
+                                <br>
+                                <input type="radio" id="outro" name="genero" value="outro" required>
+                                <label for="outro">Outro</label>
+                                <br><br>
+                                <label for="data_nascimento"><b>Data de Nascimento:</b></label>
+                                <input type="date" name="data_nascimento" id="data_nascimento" required>
+                                <br><br>
+                                <div class="inputBox">
+                                    <input type="password" name="senha" id="senha" class="inputUser" required>
+                                    <label for="senha" class="labelInput">Senha</label>
+                                    <i class="bi bi-eye-fill" id="btn-senha" onclick="mostrarSenha()"></i>
+                                </div>
+                                <br><br>
+                                <div class="inputBox">
+                                    <input type="password" name="senha" id="confirma-senha" class="inputUser" required>
+                                    <label for="senha" class="labelInput">Confirmar Senha</label>
+                                    <i class="bi bi-eye-fill" id="btn-senha2" onclick="mostrarConfirma()"></i>
+                                    <br><br>
+                                    <button type="submit" id="submit" class="btn btn-primary">Enviar</button>
+                            </fieldset>
+                        </form>
+                    </div>
+                    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+                    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+                    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
 
-    if(inputPass.type === 'password'){
-        inputPass.setAttribute('type','text')
-        btnShowPass.classList.replace('bi-eye-fill','bi-eye-slash-fill')
-    }else{
-        inputPass.setAttribute('type','password')
-        btnShowPass.classList.replace('bi-eye-slash-fill','bi-eye-fill')
-    }
-}
-    </script>
+                    <script>
+                        function mostrarSenha() {
+                            var inputPass = document.getElementById('senha')
+                            var btnShowPass = document.getElementById('btn-senha')
+
+                            if (inputPass.type === 'password') {
+                                inputPass.setAttribute('type', 'text')
+                                btnShowPass.classList.replace('bi-eye-fill', 'bi-eye-slash-fill')
+                            } else {
+                                inputPass.setAttribute('type', 'password')
+                                btnShowPass.classList.replace('bi-eye-slash-fill', 'bi-eye-fill')
+                            }
+                        }
+                        
+                        function mostrarConfirma() {
+                            var inputPass = document.getElementById('confirma-senha')
+                            var btnShowPass = document.getElementById('btn-senha2')
+
+                            if (inputPass.type === 'password') {
+                                inputPass.setAttribute('type', 'text')
+                                btnShowPass.classList.replace('bi-eye-fill', 'bi-eye-slash-fill')
+                            } else {
+                                inputPass.setAttribute('type', 'password')
+                                btnShowPass.classList.replace('bi-eye-slash-fill', 'bi-eye-fill')
+                            }
+                        }
+                    </script>
 </body>
+
 </html>
